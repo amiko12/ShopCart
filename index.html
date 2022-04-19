@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="containar1">
+      <div class="cont">
+        <img src="phone1.jpg" alt="" class="img1" />
+        <button class="iconA" onclick="phone1()" id="btn1">
+          Shop Now
+          <img src="cart.png" alt="" class="icon" />
+        </button>
+      </div>
+      <div class="cont">
+        <img src="phone2.jpg" alt="" class="img1" />
+        <button class="iconA" onclick="phone1()" id="btn2">
+          Shop Now<img src="cart.png" alt="" class="icon" />
+        </button>
+      </div>
+      <div class="cont">
+        <img src="phone3.jpg" alt="" class="img1" />
+        <button class="iconA" onclick="phone1()" id="btn3">
+          Shop Now <img src="cart.png" alt="" class="icon" />
+        </button>
+      </div>
+      <div class="cont" onclick="phone1()" id="btn4">
+        <img src="phone4.jpg" alt="" class="img1" />
+        <button class="iconA">
+          Shop Now <img src="cart.png" alt="" class="icon" />
+        </button>
+      </div>
+    </div>
+    <div class="containar">
+      <h1>YOUR BAG</h1>
+      <div class="wrapper" id="wrapper"></div>
+      <div>
+        <div class="sum">
+          <h2>Total</h2>
+          <p id="pricesum"></p>
+        </div>
+        <button class="btn" onclick="image()">CLEAR CART</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
