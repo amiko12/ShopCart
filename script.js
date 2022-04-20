@@ -46,6 +46,7 @@ document.getElementById("btn3").addEventListener("mouseover", () => {
 document.getElementById("btn4").addEventListener("mouseover", () => {
   counter = 3;
 });
+var price = [];
 function phone1() {
   ////////////////////////////////
   var div = document.createElement("div");
@@ -67,16 +68,31 @@ function phone1() {
   /////////////
   var p = document.createElement("p");
   div1.appendChild(p);
+
   p.className = "pricep";
   p.innerText = array[counter].price;
+  var y = parseInt(array[counter].price);
+  price.push(y);
+
   /////
+  var sum = 0;
+  for (let i = 0; i < price.length; i++) {
+    sum += price[i];
+    document.getElementById("pricesum").innerText = sum + "$";
+  }
+  //////////////
   var a = document.createElement("button");
   div1.appendChild(a);
   a.className = "btn10";
   a.innerText = "Remove";
-  /* console.log(div); */
-  var x = parseInt(array[counter].price);
-  document.getElementById("pricesum").innerText = x + "$";
-  console.log(counter);
+  a.onclick = function remove() {
+    div.parentNode.removeChild(div);
+    var x = sum - y;
+
+    document.getElementById("pricesum").innerText = sum - x + "$";
+    console.log(sum);
+  };
+  ///////////////////////
+
+  /*  console.log(sum); */
 }
-function remove() {}
